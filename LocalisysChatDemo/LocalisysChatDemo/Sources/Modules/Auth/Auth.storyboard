@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ekg-Uv-HYT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Auth View Controller-->
+        <scene sceneID="JXh-q3-Kck">
+            <objects>
+                <viewController id="Ekg-Uv-HYT" customClass="AuthViewController" customModule="LocalisysChatDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Phz-WT-eqw"/>
+                        <viewControllerLayoutGuide type="bottom" id="hhW-Oi-gFX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HMX-D9-t6f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="O2k-MI-QAI">
+                                <rect key="frame" x="47" y="262.5" width="281" height="142"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1wE-rL-IBC">
+                                        <rect key="frame" x="0.0" y="0.0" width="281" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="wUm-4p-N1E"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                                        <connections>
+                                            <action selector="textFieldDidChange:" destination="Ekg-Uv-HYT" eventType="editingChanged" id="dfT-Tc-cKv"/>
+                                            <outlet property="delegate" destination="Ekg-Uv-HYT" id="pcn-uH-yhd"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YNH-nj-u9u">
+                                        <rect key="frame" x="0.0" y="52" width="281" height="42"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hRp-P9-R5A">
+                                        <rect key="frame" x="0.0" y="104" width="281" height="38"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrF-Wb-I24">
+                                                <rect key="frame" x="0.0" y="0.0" width="140.5" height="38"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <inset key="contentEdgeInsets" minX="15" minY="10" maxX="15" maxY="10"/>
+                                                <state key="normal" title="Sign in"/>
+                                                <connections>
+                                                    <action selector="signIn:" destination="Ekg-Uv-HYT" eventType="touchUpInside" id="wDI-lg-Ixp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Oa-3I-gHs">
+                                                <rect key="frame" x="140.5" y="0.0" width="140.5" height="38"/>
+                                                <state key="normal" title="Register"/>
+                                                <connections>
+                                                    <action selector="signUp:" destination="Ekg-Uv-HYT" eventType="touchUpInside" id="yOt-pJ-egy"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="YNH-nj-u9u" firstAttribute="height" secondItem="1wE-rL-IBC" secondAttribute="height" id="e05-Pl-3t4"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="O2k-MI-QAI" firstAttribute="width" secondItem="HMX-D9-t6f" secondAttribute="width" multiplier="0.75" id="BZ4-Z7-eP3"/>
+                            <constraint firstItem="O2k-MI-QAI" firstAttribute="centerY" secondItem="HMX-D9-t6f" secondAttribute="centerY" id="SEM-f7-1Is"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="O2k-MI-QAI" secondAttribute="trailing" constant="32" id="SiW-Hw-QKX"/>
+                            <constraint firstItem="O2k-MI-QAI" firstAttribute="centerX" secondItem="HMX-D9-t6f" secondAttribute="centerX" id="uhw-4y-clH"/>
+                            <constraint firstItem="O2k-MI-QAI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HMX-D9-t6f" secondAttribute="leading" constant="32" id="zEV-u1-TuJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginTextField" destination="1wE-rL-IBC" id="fJz-YI-b2f"/>
+                        <outlet property="passwordTextField" destination="YNH-nj-u9u" id="7ZA-s1-diM"/>
+                        <outlet property="registerButton" destination="8Oa-3I-gHs" id="D5B-wT-zZl"/>
+                        <outlet property="signInButton" destination="vrF-Wb-I24" id="v8S-RL-P2v"/>
+                        <outletCollection property="actionButtons" destination="vrF-Wb-I24" collectionClass="NSMutableArray" id="KXY-sA-U6S"/>
+                        <outletCollection property="actionButtons" destination="8Oa-3I-gHs" collectionClass="NSMutableArray" id="cpJ-RP-k2I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gs2-YC-HZ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-114" y="161"/>
+        </scene>
+    </scenes>
+</document>
